@@ -1,0 +1,232 @@
+[options]
+font = Source Code Pro Medium 11 
+scrollback_lines = 1048520
+
+# Solarized dark color scheme
+
+# [colors]
+# foreground = #839496
+# foreground_bold = #eee8d5
+# #foreground_dim = #888888
+# #background = #002b36
+# background = #00222b
+# cursor = #93a1a1
+
+# # if unset, will reverse foreground and background
+# #highlight = #839496
+
+# # colors from color0 to color254 can be set
+# color0 = #073642
+# color1 = #dc322f
+# color2 = #859900
+# color3 = #b58900
+# color4 = #268bd2
+# color5 = #d33682
+# color6 = #2aa198
+# color7 = #eee8d5
+# color8 = #002b36
+# color9 = #cb4b16
+# color10 = #586e75
+# color11 = #657b83
+# color12 = #839496
+# color13 = #6c71c4
+# color14 = #93a1a1
+# color15 = #fdf6e3
+
+
+
+
+# [colors]
+
+# # special
+#  foreground      = #c0c5ce
+#  foreground_bold = #c0c5ce
+#  cursor          = #c0c5ce
+#  background      = #2b303b
+
+#  # black
+#  color0  = #2b303b
+#  color8  = #65737e
+
+#  # red
+#  color1  = #bf616a
+#  color9  = #bf616a
+
+#  # green
+#  color2  = #a3be8c
+#  color10 = #a3be8c
+
+#  # yellow
+#  color3  = #ebcb8b
+#  color11 = #ebcb8b
+
+#  # blue
+#  color4  = #8fa1b3
+#  color12 = #8fa1b3
+
+#  # magenta
+#  color5  = #b48ead
+#  color13 = #b48ead
+
+#  # cyan
+#  color6  = #96b5b4
+#  color14 = #96b5b4
+
+#  # white
+# 
+#  foreground      = #eceff1
+#  foreground_bold = #eceff1
+#  cursor          = #eceff1
+#  background      = #263238
+
+#  # black
+#  color0  = #263238
+#  color8  = #37474f
+
+#  # red
+#  color1  = #ff9800
+#  color9  = #ffa74d
+
+#  # green
+#  color2  = #8bc34a
+#  color10 = #9ccc65
+
+#  # yellow
+#  color3  = #ffc107
+#  color11 = #ffa000
+
+#  # blue
+#  color4  = #03a9f4
+#  color12 = #81d4fa
+
+#  # magenta
+#  color5  = #e91e63
+#  color13 = #ad1457
+
+#  # cyan
+#  color6  = #009688
+#  color14 = #26a69a
+
+#  # white
+#  color7  = #cf8dc
+#  color15 = #eceff1
+
+
+
+
+# 
+[colors]
+
+#neodark
+# special
+ foreground      = #7ea2b4
+ foreground_bold = #7ea2b4
+ cursor          = #7ea2b4
+ background      = #161b1d
+
+ # black
+ color0  = #161b1d
+ color8  = #5a7b8c
+
+ # red
+ color1  = #d22d72
+ color9  = #d22d72
+
+ # green
+ color2  = #568c3b
+ color10 = #568c3b
+
+ # yellow
+ color3  = #8a8a0f
+ color11 = #8a8a0f
+
+ # blue
+ color4  = #257fad
+ color12 = #257fad
+
+ # magenta
+ color5  = #5d5db1
+ color13 = #5d5db1
+
+ # cyan
+ color6  = #2d8f6f
+ color14 = #2d8f6f
+
+ # white
+ color7  = #7ea2b4
+ color15 = #ebf8ff
+
+
+
+# ocean dark
+# [colors]
+
+# # special
+#  foreground      = #c0c5ce
+#  foreground_bold = #c0c5ce
+#  cursor          = #c0c5ce
+#  background      = #2b303b
+
+#  # black
+#  color0  = #2b303b
+#  color8  = #65737e
+
+#  # red
+#  color1  = #bf616a
+#  color9  = #bf616a
+
+#  # green
+#  color2  = #a3be8c
+#  color10 = #a3be8c
+
+#  # yellow
+#  color3  = #ebcb8b
+#  color11 = #ebcb8b
+
+#  # blue
+#  color4  = #8fa1b3
+#  color12 = #8fa1b3
+
+#  # magenta
+#  color5  = #b48ead
+#  color13 = #b48ead
+
+#  # cyan
+#  color6  = #96b5b4
+#  color14 = #96b5b4
+
+#  # white
+#  color7  = #c0c5ce
+#  color15 = #eff1f5
+
+
+#===============================================
+
+# foreground = #D8DEE9
+# background = #2E3440
+# foreground_bold = #D8DEE9
+# cursor = #D8DEE9
+# cursor_foreground = #2E3440
+# highlight = #4C566A
+
+# color0  = #3B4252
+# color1  = #BF616A
+# color2  = #A3BE8C
+# color3  = #EBCB8B
+# color4  = #81A1C1
+# color5  = #B48EAD
+# color6  = #88C0D0
+# color7  = #E5E9F0
+# color8  = #4C566A
+# color9  = #BF616A
+# color10 = #A3BE8C
+# color11 = #EBCB8B
+# color12 = #81A1C1
+# color13 = #B48EAD
+# color14 = #8FBCBB
+# color15 = #ECEFF4
+
+
+
+
+
