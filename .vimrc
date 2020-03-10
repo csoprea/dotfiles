@@ -30,13 +30,6 @@ set diffopt=filler,context:0
 "   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 " endfunction
 
-"Pathogen
-"=================================================================================
-"set nocp
-"call pathogen#infect()
-"call pathogen#helptags() " generate helptags for everything in 'runtimepath'
-"syntax on 
-
 "vim-plug
 "=================================================================================
 call plug#begin('~/.vim/plugged')
@@ -47,9 +40,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'pangloss/vim-javascript'
-Plug 'ternjs/tern_for_vim'
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'scrooloose/syntastic'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'mxw/vim-jsx'
@@ -64,6 +55,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'vim-scripts/PatternsOnText'
 Plug 'mhinz/vim-signify'
 Plug 'w0rp/ale'
+Plug 'davidhalter/jedi-vim'
+"Plug 'ajh17/VimCompletesMe'
+"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'vectorstorm/vim-chlordane'
@@ -71,6 +66,8 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'hauleth/blame.vim'
 Plug 'beigebrucewayne/skull-vim'
+Plug 'kristijanhusak/vim-hybrid-material'
+
 
 
 call plug#end()
@@ -82,7 +79,8 @@ filetype plugin on
 "=================================================================================
 "colorscheme neodark
 "colorscheme solarized
-colorscheme OceanicNext
+"colorscheme OceanicNext
+colorscheme nord
 set background=dark
 set termguicolors
 
@@ -126,6 +124,9 @@ nmap <C-k> <C-W>k
 nmap <C-\> :BufExplorer<CR>
 silent! map <F3> :NERDTreeFind<CR>
 nnoremap <silent> <C-p> :FZF<CR>
+nmap <C-f>j :%!python -m json.tool<CR>
+vnoremap <silent>yc :'<,'>w !xclip -selection clipboard<CR><CR>
+vnoremap <silent><Leader>y "yy <Bar> :call system('xclip', @y)<CR>
 
 
 "autocmd
@@ -185,37 +186,6 @@ let g:ale_set_quickfix = 0
 let g:ale_linters = {
       \   'javascript': ['eslint'],
       \}
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_loc_list_height = 5
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
-""Syntastic local linter support
-"let g:syntastic_javascript_checkers = []
-"function CheckJavaScriptLinter(filepath, linter)
-"	if exists('b:syntastic_checkers')
-"		return
-"	endif
-"	if filereadable(a:filepath)
-"		let b:syntastic_checkers = [a:linter]
-"		let {'b:syntastic_' . a:linter . '_exec'} = a:filepath
-"	endif
-"endfunction
-
-"function SetupJavaScriptLinter()
-"	let l:current_folder = expand('%:p:h')
-"	let l:bin_folder = fnamemodify(syntastic#util#findFileInParent('package.json', l:current_folder), ':h')
-"	let l:bin_folder = l:bin_folder . '/node_modules/.bin/'
-"	call CheckJavaScriptLinter(l:bin_folder . 'standard', 'standard')
-"	call CheckJavaScriptLinter(l:bin_folder . 'eslint', 'eslint')
-"endfunction
-
-"autocmd FileType javascript call SetupJavaScriptLinter()
 
 "vim-indent-guides
 "=================================================================================
