@@ -115,46 +115,46 @@ scrollback_lines = 1048520
 
 
 # 
-[colors]
+#[colors]
 
-#neodark
-# special
- foreground      = #7ea2b4
- foreground_bold = #7ea2b4
- cursor          = #7ea2b4
- background      = #161b1d
+##neodark
+## special
+# foreground      = #7ea2b4
+# foreground_bold = #7ea2b4
+# cursor          = #7ea2b4
+# background      = #161b1d
 
- # black
- color0  = #161b1d
- color8  = #5a7b8c
+# # black
+# color0  = #161b1d
+# color8  = #5a7b8c
 
- # red
- color1  = #d22d72
- color9  = #d22d72
+# # red
+# color1  = #d22d72
+# color9  = #d22d72
 
- # green
- color2  = #568c3b
- color10 = #568c3b
+# # green
+# color2  = #568c3b
+# color10 = #568c3b
 
- # yellow
- color3  = #8a8a0f
- color11 = #8a8a0f
+# # yellow
+# color3  = #8a8a0f
+# color11 = #8a8a0f
 
- # blue
- color4  = #257fad
- color12 = #257fad
+# # blue
+# color4  = #257fad
+# color12 = #257fad
 
- # magenta
- color5  = #5d5db1
- color13 = #5d5db1
+# # magenta
+# color5  = #5d5db1
+# color13 = #5d5db1
 
- # cyan
- color6  = #2d8f6f
- color14 = #2d8f6f
+# # cyan
+# color6  = #2d8f6f
+# color14 = #2d8f6f
 
- # white
- color7  = #7ea2b4
- color15 = #ebf8ff
+# # white
+# color7  = #7ea2b4
+# color15 = #ebf8ff
 
 
 
@@ -228,5 +228,30 @@ scrollback_lines = 1048520
 
 
 
+#nord
+[colors]
+cursor = #d8dee9
+cursor_foreground = #2e3440
 
+foreground = #d8dee9
+foreground_bold = #d8dee9
+background = #2e3440
 
+highlight = #4c566a
+
+color0  = #3b4252
+color1  = #bf616a
+color2  = #a3be8c
+color3  = #ebcb8b
+color4  = #81a1c1
+color5  = #b48ead
+color6  = #88c0d0
+color7  = #e5e9f0
+color8  = #4c566a
+color9  = #bf616a
+color10 = #a3be8c
+color11 = #ebcb8b
+color12 = #81a1c1
+color13 = #b48ead
+color14 = #8fbcbb
+color15 = #eceff4
