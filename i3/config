@@ -159,10 +159,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -183,6 +183,17 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
+set $mode_scrot [1] selection | [2] active window
+mode "$mode_scrot" {
+    bindsym --release 1 mode "default", exec --no-startup-id scrot -s ~/stuff/screenshots/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
+    bindsym --release 2 mode "default", exec --no-startup-id scrot -u -d 4 ~/stuff/screenshots/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+bindsym $mod+p mode "$mode_scrot"
+
+bindsym $mod+BackSpace exec termite -t "vim-float" -e "vim -c 'cd ~/stuff'"
+for_window [title="^vim-float$"] floating enable resize set 1500 1500
 
 # Widow Colours
 #                         border  background text    indicator
@@ -213,4 +224,5 @@ bar
 {
 	status_command i3blocks
 	position top
+	tray_output eDP-1
 }
