@@ -214,7 +214,6 @@ let g:limelight_paragraph_span = 1
 
 "erlang
 "=================================================================================
-set tags=~/work/pay/tags
 set cot-=preview
 
 runtime snippets.vim
