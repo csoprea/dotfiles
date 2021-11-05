@@ -56,18 +56,21 @@ Plug 'vim-scripts/PatternsOnText'
 Plug 'mhinz/vim-signify'
 Plug 'w0rp/ale'
 Plug 'davidhalter/jedi-vim'
-"Plug 'ajh17/VimCompletesMe'
-"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'vectorstorm/vim-chlordane'
 Plug 'whatyouhide/vim-gotham'
 Plug 'KeitaNakamura/neodark.vim'
+Plug 'ldelossa/vimdark'
 Plug 'hauleth/blame.vim'
 Plug 'beigebrucewayne/skull-vim'
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 
+"erlang
+Plug 'vim-erlang/vim-erlang-tags'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
 
 
 call plug#end()
@@ -77,9 +80,6 @@ filetype plugin on
 
 "Display
 "=================================================================================
-"colorscheme neodark
-"colorscheme solarized
-"colorscheme OceanicNext
 colorscheme nord
 set background=dark
 set termguicolors
@@ -89,9 +89,7 @@ set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 8
 syntax on
 set ruler
 set number
-set relativenumber
-"set colorcolumn=80
-"hi clear CursorLine
+"set relativenumber
 hi CursorLine term=none cterm=none
 set cursorline
 set incsearch
@@ -141,7 +139,8 @@ au BufNewFile,BufRead *.py, set tabstop=4 |
 	\ set autoindent |
 	\ set fileformat=unix
 
-au BufNewFile,BufRead *.js,*.json set tabstop=2 |
+au BufNewFile,BufRead *.js, *.json,
+        \ set tabstop=2 |
 	\ set softtabstop=2 |
 	\ set shiftwidth=2 |
 	\ set textwidth=79 |
@@ -150,7 +149,18 @@ au BufNewFile,BufRead *.js,*.json set tabstop=2 |
 	\ set fileformat=unix |
 	\ set foldmethod=syntax
 
+au BufNewFile,BufRead *.erl
+        \ set tabstop=2 |
+	\ set softtabstop=2 |
+	\ set shiftwidth=2 |
+	\ set textwidth=79 |
+	\ set expandtab |
+	"\ set autoindent |
+	\ set fileformat=unix |
+	\ set foldmethod=syntax |
+	\ set colorcolumn=100
 
+au BufRead *.log set wrap
 
 " NerdTree
 " ==================================================================================
@@ -181,7 +191,7 @@ let g:tern_map_keys=1
 "=================================================================================
 let g:airline#extensions#ale#enabled = 1
 let g:ale_open_list = 1
-let g:ale_set_loclist = 1
+let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
 let g:ale_linters = {
       \   'javascript': ['eslint'],
@@ -202,3 +212,9 @@ let g:indent_guides_auto_colors=0
 let g:limelight_priority = -1
 let g:limelight_paragraph_span = 1
 
+"erlang
+"=================================================================================
+set tags=~/work/pay/tags
+set cot-=preview
+
+runtime snippets.vim

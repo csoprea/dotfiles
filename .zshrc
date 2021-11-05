@@ -2,10 +2,10 @@
 # export NVM_DIR="/home/coprea/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/coprea/.oh-my-zsh
+  export ZSH=/home/cristianoprea/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -114,8 +114,17 @@ function zle-line-init zle-keymap-select {
          zle reset-prompt
  }
 
- zle -N zle-line-init
- zle -N zle-keymap-select
+zle -N zle-line-init
+zle -N zle-keymap-select
 
- export KEYTIMEOUT=1
+PROMPT='%{$fg[yellow]%}[%D{%H:%M:%S}]'$PROMPT
 
+export KEYTIMEOUT=1
+export TERM=xterm-256color
+
+source ~/.kerl/installations/activate 
+mkdir -p /tmp/nix
+export TMPDIR=/tmp/nix
+if [ -e /home/cristianoprea/.nix-profile/etc/profile.d/nix.sh ]; then . /home/cristianoprea/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export ANSIBLE_VAULT_PASSWORD_FILE=/home/cristianoprea/stuff/klarna/secret/cpgw.secret
