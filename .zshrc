@@ -123,8 +123,4 @@ export KEYTIMEOUT=1
 export TERM=xterm-256color
 
 source ~/.kerl/installations/activate 
-mkdir -p /tmp/nix
-export TMPDIR=/tmp/nix
-if [ -e /home/cristianoprea/.nix-profile/etc/profile.d/nix.sh ]; then . /home/cristianoprea/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-export ANSIBLE_VAULT_PASSWORD_FILE=/home/cristianoprea/stuff/klarna/secret/cpgw.secret
